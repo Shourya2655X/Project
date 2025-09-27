@@ -1,0 +1,120 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>E.D.I.E.N.T Platform</title>
+<link rel="stylesheet" href="style.css" />
+<script defer src="app.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="loginPage" class="login-page active">
+  <div class="login-container">
+    <div class="login-content">
+      <div class="logo-section">
+        <div class="logo">
+          <i class="fas fa-shield-alt"></i> <span>E.D.I.E.N.T</span>
+        </div>
+        <h1 class="tagline">YOUR SKILL. YOUR WORTH. ZERO SCAMS.</h1>
+      </div>
+      <div class="login-form">
+        <form id="loginForm">
+          <input type="text" id="loginName" placeholder="Enter your name" required /><br/>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required /><br/>
+          <button type="submit">JOIN E.D.I.E.N.T</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mainApp" class="main-app" style="display:none;">
+  <nav class="top-nav">
+    <div class="logo">
+      <i class="fas fa-shield-alt"></i> E.D.I.E.N.T
+    </div>
+    <div class="welcome-msg" id="welcomeMsg"></div>
+    <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+  </nav>
+
+  <aside class="side-nav">
+    <button class="nav-btn active" data-target="dashboard"><i class="fas fa-home"></i> Home</button>
+    <button class="nav-btn" data-target="aiSearch"><i class="fas fa-magnifying-glass"></i> AI Search</button>
+    <button class="nav-btn" data-target="courses"><i class="fas fa-book"></i> Courses</button>
+    <button class="nav-btn" data-target="internships"><i class="fas fa-graduation-cap"></i> Internships</button>
+    <button class="nav-btn" data-target="profile"><i class="fas fa-user"></i> Profile</button>
+  </aside>
+
+  <main class="content">
+    <section id="dashboard" class="page active">
+      <h2>Recommended Clients & Projects</h2>
+      <div class="filter-bar glass">
+        <label>Skill Filter:</label>
+        <select id="dashboardSkillFilter">
+          <option value="all">All</option>
+          <option>Video Editor</option>
+          <option>Web Developer</option>
+          <option>Content Writer</option>
+          <option>Animator</option>
+          <option>UI/UX Designer</option>
+          <option>Data Analyst</option>
+        </select>
+      </div>
+      <div id="recommendedProjects" class="card-grid"></div>
+
+      <h2>Hot Projects - Corporate Networks</h2>
+      <div id="hotProjects" class="card-grid"></div>
+    </section>
+
+    <section id="aiSearch" class="page">
+      <h2>Find a client or project</h2>
+      <div class="filter-bar glass">
+        <label>Skill Category:</label>
+        <select id="aiSkillTab">
+          <option>Video Editor</option>
+          <option>Web Developer</option>
+          <option>Content Writer</option>
+          <option>Animator</option>
+          <option>UI/UX Designer</option>
+          <option>Data Analyst</option>
+        </select>
+      </div>
+
+      <div class="filter-tabs glass" id="aiLevelTabs">
+        <button data-level="Basic" class="active">Basic</button>
+        <button data-level="Pro">Pro</button>
+        <button data-level="Advanced">Advanced</button>
+      </div>
+
+      <div id="aiSearchResults" class="card-grid"></div>
+    </section>
+
+    <section id="courses" class="page">
+      <h2>Upskill with E.D.I.E.N.T Courses</h2>
+      <div id="coursesList" class="card-grid"></div>
+    </section>
+
+    <section id="internships" class="page">
+      <h2>Real-World Experience, Zero Pressure</h2>
+      <div class="filter-tabs glass" id="internshipFilterTabs">
+        <button data-type="all" class="active">All</button>
+        <button data-type="paid">Paid</button>
+        <button data-type="unpaid">Unpaid</button>
+      </div>
+      <div id="internshipsList" class="card-grid"></div>
+    </section>
+
+    <section id="profile" class="page">
+      <h2>Your Profile</h2>
+      <div id="profileSection"><p>Profile management coming soon...</p></div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
+ 
